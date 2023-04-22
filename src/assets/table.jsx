@@ -23,14 +23,6 @@ export default function DisplayTransaction() {
 
   return (
     <div>
-      <style>
-        {`
-          th,
-          td {
-           background-color:#7cb5b3
-          }
-        `}
-      </style>
       <table>
         <tr>
           <th>date</th>
