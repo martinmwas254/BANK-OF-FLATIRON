@@ -23,6 +23,14 @@ export default function DisplayTransaction() {
 
   return (
     <div>
+      <style>
+        {`
+          table,th,
+          td {
+           border:1px solid white
+          }
+        `}
+      </style>
       <table>
         <tr>
           <th>date</th>
