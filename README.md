@@ -1,5 +1,5 @@
 # BANK-OF-FLATIRON
-Bank of Flatiron is platform where users can view their transactions,post their transactions and filter
+Bank of Flatiron is platform where users can view their transactions, post their transactions and filter
 transactions based on description.
 
 ## Installation
