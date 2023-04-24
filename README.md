@@ -5,10 +5,10 @@ transactions based on description.
 ## Installation
 
 <ol>
-<li>git clone https://github.com/martinmwas254/BANK-OF-FLATIRON.git<li>
-<li>cd BANK-OF-FLATIRON<li>
-<li>npm install && npm run dev<li>
-<li>In the directory of the project cd src/assets && json-server -w db.json -p 8001 <li>
+<li>git clone https://github.com/martinmwas254/BANK-OF-FLATIRON.git</li>
+<li>cd BANK-OF-FLATIRON</li>
+<li>npm install && npm run dev</li>
+<li>In the directory of the project cd src/assets && json-server -w db.json -p 8001 </li>
 <ol>
 ## MIT License
 
