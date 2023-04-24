@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-
-export default function DisplayTransaction() {
+export default function TableTransaction() {
   const [transactions, setTransactions] = useState([]);
-
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredTransactions, setFiltered] = useState([]);
   useEffect(() => {
     const url = `http://localhost:8001/transactions`;
-
     fetch(url, {
       method: "GET",
       headers: { "content-type": "application/json" },
@@ -15,22 +14,38 @@ export default function DisplayTransaction() {
       })
       .then((data) => {
         setTransactions(data);
+        setFiltered(data);
       })
       .catch((error) => {
         console.error(error);
       });
   }, []);
-
+  const handleSearch = () => {
+    const newFilteredTransactions = transactions.filter((transaction) =>
+      transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFiltered(newFilteredTransactions);
+  };
   return (
     <div>
       <style>
         {`
-          table,th,
-          td {
-           border:1px solid white
+          th,
+          table,td{
+          border:1px solid white
           }
         `}
       </style>
+      <div>
+        <label>Search description:</label>
+        <input
+          type="text"
+          placeholder="Search by description"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
       <table>
         <tr>
           <th>date</th>
@@ -38,8 +53,7 @@ export default function DisplayTransaction() {
           <th>category</th>
           <th>amount</th>
         </tr>
-
-        {transactions.map((transaction) => (
+        {filteredTransactions.map((transaction) => (
           <tr key={transaction.id}>
             <td>{transaction.date}</td>
             <td>{transaction.description}</td>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import DisplayTransaction from "./assets/table";
+import TableTransaction from "./assets/table";
 import PostTransaction from "./assets/post";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <h1>FLATIRON BANK</h1>
       <PostTransaction/> 
       <div style={{marginLeft:"25%",marginRight:"25%",marginTop:"1%"}}>     
-      <DisplayTransaction />
+      <TableTransaction />
       </div>
     </div>
   );
