@@ -10,6 +10,7 @@ transactions based on description.
 <li>npm install && npm run dev</li>
 <li>In the directory of the project cd src/assets && json-server -w db.json -p 8001 </li>
 <ol>
+  
 ## MIT License
 
 Copyright (c) 2023 martin mwangi
